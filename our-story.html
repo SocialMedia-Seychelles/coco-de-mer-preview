@@ -11,8 +11,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Jomhuria&family=Nanum+Gothic:wght@400;700&family=Parkinsans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=m7">
-<link rel="stylesheet" href="assets/pages.css?v=m7">
+<link rel="stylesheet" href="assets/site.css?v=m9">
+<link rel="stylesheet" href="assets/pages.css?v=m9">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/img/icon-512.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body>
 
@@ -20,11 +23,12 @@
   <a class="logo" href="index.html" aria-label="Coco De Mer Collection, home"><img src="assets/img/logo.png" alt="Coco De Mer Collection"></a>
   <nav class="menu" aria-label="Main">
     <span class="menu-glow" aria-hidden="true"></span>
-    <a href="index.html">Home</a>
+    <a class="menu-home" href="index.html" aria-label="Home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.5 12 3.8l8.5 6.7"/><path d="M5.8 9v10.7h4.4v-5.6h3.6v5.6h4.4V9"/></svg></a>
     <a href="index.html#collection">Perfumes</a>
     <a href="where-to-buy.html">Where to Buy</a>
     <a href="our-story.html" aria-current="page">Our Story</a>
-    <a href="blog.html">Blog</a>
+    <a href="blog.html">Journal</a>
+    <a href="shop-locally.html">Factory Tours</a>
   </nav>
   <a class="btn-nut" href="https://www.cocodemerseychelles.com" target="_blank" rel="noopener">Shop the Nut
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
@@ -36,7 +40,7 @@
   <button class="overlay-close" aria-label="Close menu" data-menu-close>×</button>
   <nav aria-label="Full menu">
     <a href="index.html">Home</a><a href="index.html#collection">Perfumes</a><a href="where-to-buy.html">Where to Buy</a>
-    <a href="shop-locally.html">Shop Locally &amp; Factory Tours</a><a href="our-story.html">Our Story</a><a href="blog.html">Blog</a>
+    <a href="shop-locally.html">Shop Locally &amp; Factory Tours</a><a href="our-story.html">Our Story</a><a href="blog.html">Journal</a>
     <a href="https://www.cocodemerseychelles.com" target="_blank" rel="noopener">Shop the Coco de Mer Nut</a>
   </nav>
 </div>
@@ -72,8 +76,8 @@
       <div class="titles"><div class="small">The</div><h2 class="big">Atelier</h2></div>
       <div class="caption"><h3>Est. 1999 · Au Cap, Mahé</h3><p>A historic cinnamon kiln turned Island Scent Distillery, where we discovered the captivating fragrance hidden in the husk of the Coco de Mer.</p></div>
       <button class="discover"><span>Discover</span></button>
-      <template class="text"><p>In 1999, we transformed a historic cinnamon kiln at Turtle Bay, Au Cap, into the Island Scent Distillery. There we began producing essential oils from some of the Seychelles' most treasured plants: cinnamon bark and leaf, takamaka seed, lemongrass, geranium and patchouli.</p><p>It was here that we made an exciting discovery: the husk of the Coco de Mer released a unique and captivating fragrance. It led to the first perfumes in Seychelles made with the scent of Coco de Mer, and every one of them is still made by hand in our atelier.</p></template>
-      <template class="facts"><div><b>Turtle Bay</b><span>Au Cap, Mahé</span></div><div><b>Cinnamon kiln</b><span>A historic building</span></div><div><b>Handmade</b><span>Every perfume, by hand</span></div></template>
+      <template class="text"><p>In 1999, we transformed a historic cinnamon kiln at Domaine de Val des Prés, Au Cap, into the Island Scent Distillery. There we began producing essential oils from some of the Seychelles' most treasured plants: cinnamon bark and leaf, takamaka seed, lemongrass, geranium and patchouli.</p><p>It was here that we made an exciting discovery: the husk of the Coco de Mer released a unique and captivating fragrance. It led to the first perfumes in Seychelles made with the scent of Coco de Mer, and every one of them is still made by hand in our atelier.</p></template>
+      <template class="facts"><div><b>Val des Prés</b><span>Au Cap, Mahé</span></div><div><b>Cinnamon kiln</b><span>A historic building</span></div><div><b>Handmade</b><span>Every perfume, by hand</span></div></template>
     </div>
     <div class="chapter" data-title="The Rarest Palm">
       <div class="bg" data-bg="assets/img/story-palm.jpg"></div>
@@ -133,7 +137,7 @@
       <div class="tl-item"><span class="dot"></span><div class="txt"><div class="yr">600+ years ago</div><h3>The Garden of Eden</h3><p>Explorers believed the Vallée de Mai on Praslin, home of the Coco de Mer, was the original Garden of Eden.</p></div></div>
       <div class="tl-item"><span class="dot"></span><div class="txt"><div class="yr">1587</div><h3>A treasure for emperors</h3><p>A Coco de Mer ewer is made for the collection of Emperor Rudolf II, showing how prized the nut already was.</p></div></div>
       <div class="tl-item"><span class="dot"></span><div class="txt"><div class="yr">Late 1980s</div><h3>A love story begins</h3><p>Our founder Silvana arrives in the Seychelles and meets Patrick. After a period in Italy, where our daughter Sharon is born, we return to the islands.</p></div></div>
-      <div class="tl-item"><span class="dot"></span><div class="txt"><div class="yr">1999</div><h3>The Island Scent Distillery</h3><p>We transform a historic cinnamon kiln at Turtle Bay, Au Cap, into a distillery producing raw, wild essential oils from Seychelles plants.</p></div></div>
+      <div class="tl-item"><span class="dot"></span><div class="txt"><div class="yr">1999</div><h3>The Island Scent Distillery</h3><p>We transform a historic cinnamon kiln at Domaine de Val des Prés, Au Cap, into a distillery producing raw, wild essential oils from Seychelles plants.</p></div></div>
       <div class="tl-item"><span class="dot"></span><div class="txt"><div class="yr">A world first</div><h3>Bringing the Coco de Mer to the world</h3><p>At a time when it was almost unknown outside Seychelles, we begin exporting Coco de Mer to international markets.</p></div></div>
       <div class="tl-item"><span class="dot"></span><div class="txt"><div class="yr">The discovery</div><h3>The scent in the husk</h3><p>In our distillery we discover that the husk of the Coco de Mer releases a captivating fragrance. With the Universities of Pisa and Florence and master perfumers, it becomes the first Coco de Mer perfume.</p></div></div>
       <div class="tl-item"><span class="dot"></span><div class="txt"><div class="yr">The collection</div><h3>Five energies of the legend</h3><p>Fanm, Zonm, Lodas, Coco de Mer Oud and Sovaz, each handmade in our atelier and inspired by the legend.</p></div></div>
@@ -156,7 +160,7 @@
 
 <footer class="site-footer">
   <div class="foot-brand"><img loading="lazy" decoding="async" src="assets/img/logo.png" alt="Coco De Mer Collection"><p>The essence of Seychelles, handmade with the legendary Coco de Mer.</p></div>
-  <div class="foot-col"><h3>Visit</h3><p>Island Scent Distillery<br>Turtle Bay, Au Cap<br>Mahé, Seychelles</p>
+  <div class="foot-col"><h3>Visit</h3><p>Island Scent Distillery<br>Domaine de Val des Prés, Au Cap<br>Mahé, Seychelles</p>
     <a class="tour-cta" href="shop-locally.html#tours">Free factory tours <span>Learn more</span></a></div>
   <div class="foot-col"><h3>Contact</h3><p><a href="tel:+2482595547">+248 259 5547</a><br><a class="wa" href="https://wa.me/2482595547" target="_blank" rel="noopener">Also on WhatsApp</a><br><a href="mailto:info@cocodemercosmetics.com">info@cocodemercosmetics.com</a></p></div>
   <div class="foot-col"><h3>Follow</h3><div class="socials">
@@ -167,7 +171,7 @@
 </div>
   <p class="foot-legal">© <span data-year></span> Coco De Mer Collection · Island Scent Pty Ltd</p>
 </footer>
-<script src="assets/site.js?v=m7"></script>
-<script src="assets/pages.js?v=m7"></script>
+<script src="assets/site.js?v=m9"></script>
+<script src="assets/pages.js?v=m9"></script>
 </body>
 </html>

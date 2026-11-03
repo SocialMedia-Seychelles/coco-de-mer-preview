@@ -245,3 +245,10 @@ html,body{overflow-x:clip}
   .badge{bottom:215px}
   .tags{top:108px;bottom:auto;left:0;right:0;justify-content:center}
 }
+
+/* Menu: house icon in place of "Home" (matches the shop site) */
+.menu a.menu-home{padding:0 16px}
+.menu-home svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:1320px){.menu a{padding:0 14px}.menu a.menu-home{padding:0 13px}}
+@media (max-width:1180px){.menu{display:none}}
+@media (min-width:761px) and (max-width:1100px){.site-footer{grid-template-columns:1.2fr 1fr 1fr;padding:64px 40px 32px}.foot-brand{grid-column:1/-1;display:flex;align-items:center;gap:28px}.foot-brand img{margin:0}}
