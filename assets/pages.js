@@ -108,8 +108,15 @@
 
 // Deferred backgrounds: load just before they scroll into view.
 // Story chapters are off-screen slides, so load those once the page has finished loading.
+// Phones and portrait tablets get the lighter "-m" crops.
 (function () {
-  const set = (el) => { if (el.dataset.bg) { el.style.backgroundImage = `url(${el.dataset.bg})`; el.removeAttribute('data-bg'); } };
+  const small = matchMedia('(max-width: 900px)').matches;
+  const set = (el) => {
+    if (!el.dataset.bg) return;
+    el.style.backgroundImage = `url(${small ? el.dataset.bg.replace(/\.jpg$/, '-m.jpg') : el.dataset.bg})`;
+    el.removeAttribute('data-bg');
+  };
+  document.querySelectorAll('main > :first-child > .bg, .chapter:first-child > .bg').forEach(set); // first screen loads right away
   const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { set(e.target); io.unobserve(e.target); } }), { rootMargin: '900px 0px' });
   document.querySelectorAll('[data-bg]').forEach((el) => (el.closest('.chapter') ? null : io.observe(el)));
   addEventListener('load', () => document.querySelectorAll('.chapter [data-bg]').forEach(set));

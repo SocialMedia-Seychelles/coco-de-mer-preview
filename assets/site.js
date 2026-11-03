@@ -26,6 +26,14 @@
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !overlay.hidden) close(); });
   }
 
+  // Header gets a backing once the page scrolls (styled on phones and tablets only)
+  const header = document.querySelector('[data-header]');
+  if (header) {
+    const onScroll = () => header.classList.toggle('scrolled', scrollY > 40);
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   const y = document.querySelector('[data-year]');
   if (y) y.textContent = new Date().getFullYear();
 })();

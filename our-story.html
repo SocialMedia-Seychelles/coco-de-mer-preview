@@ -6,12 +6,13 @@
 <title>Our Story · Coco De Mer Collection</title>
 <meta name="description" content="The legend of the Coco de Mer, the founders of Coco De Mer Collection, our atelier in Au Cap and how we work sustainably.">
 <meta name="robots" content="noindex, nofollow">
-<link rel="preload" as="image" href="assets/img/story-coco.jpg">
+<link rel="preload" as="image" href="assets/img/story-coco.jpg" media="(min-width:901px)">
+<link rel="preload" as="image" href="assets/img/story-coco-m.jpg" media="(max-width:900px)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Jomhuria&family=Nanum+Gothic:wght@400;700&family=Parkinsans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/pages.css">
+<link rel="stylesheet" href="assets/site.css?v=m7">
+<link rel="stylesheet" href="assets/pages.css?v=m7">
 </head>
 <body>
 
@@ -43,7 +44,7 @@
 <main>
   <section class="chapters" data-chapters aria-roledescription="carousel" aria-label="Our story in six chapters">
     <div class="chapter" data-title="Home of the Coco de Mer">
-      <div class="bg" style="background-image:url(assets/img/story-coco.jpg)"></div>
+      <div class="bg" data-bg="assets/img/story-coco.jpg"></div>
       <div class="titles"><div class="small">Home of the</div><h1 class="big">Coco de Mer</h1></div>
       <div class="caption"><h3>The Garden of Eden</h3><p>Over 600 years ago, explorers believed the Vallée de Mai on Praslin was the Garden of Eden, the only place on earth where the Coco de Mer grows wild.</p></div>
       <button class="discover"><span>Discover</span></button>
@@ -121,7 +122,7 @@
       </div>
     </div>
     <a class="play" href="assets/video/coco-de-mer.mp4" data-video="assets/video/coco-de-mer.mp4" data-poster="assets/video/coco-de-mer.jpg" aria-label="Play our Coco de Mer video"><i><svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></svg></i></a>
-    <img loading="lazy" decoding="async" class="forest-art" src="assets/img/sus-forest.png" alt="">
+    <img loading="lazy" decoding="async" class="forest-art" src="assets/img/sus-forest.png" srcset="assets/img/sus-forest-m.png 900w, assets/img/sus-forest.png 1440w" sizes="(max-width:900px) 130vw, 112vw" alt="">
   </section>
 
   <section class="timeline" id="timeline">
@@ -166,7 +167,7 @@
 </div>
   <p class="foot-legal">© <span data-year></span> Coco De Mer Collection · Island Scent Pty Ltd</p>
 </footer>
-<script src="assets/site.js"></script>
-<script src="assets/pages.js"></script>
+<script src="assets/site.js?v=m7"></script>
+<script src="assets/pages.js?v=m7"></script>
 </body>
 </html>

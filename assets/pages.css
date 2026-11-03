@@ -272,3 +272,150 @@
 .tour-strip figure:nth-child(2):hover{transform:translateY(-42px) rotate(1.5deg)}
 .tour-strip img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease-out)}
 .tour-strip figure:hover img{transform:scale(1.08)}
+
+/* ---------- Small laptops: keep the blog arc on one row ---------- */
+@media (min-width:1101px) and (max-width:1360px){
+  .arc{flex-wrap:nowrap;gap:12px;padding:40px 24px 80px}
+  .post{flex:1 1 0;min-width:0;max-width:238px;height:250px;padding:20px}
+  .post h3{font-size:21px}
+}
+
+/* ---------- Tablets & phones: stack overlays into the page flow ---------- */
+@media (max-width:1100px){
+  .screen{flex-direction:column;align-items:stretch;justify-content:center}
+  .screen-inner{padding:110px 32px 56px}
+  .fade-left::after{background:linear-gradient(180deg,rgba(13,10,8,.5) 0%,rgba(13,10,8,.35) 40%,rgba(13,10,8,.82) 100%)}
+  .promo{position:relative;right:auto;bottom:auto;width:auto;max-width:520px;margin:0 32px 48px;padding:16px;gap:16px}
+  .promo img{width:104px;height:104px;flex:0 0 auto}
+  .dropdown-menu{width:min(380px,calc(100vw - 40px))}
+  .band{grid-template-columns:1fr;gap:28px;padding:80px 32px}
+  .band .btn-gold{justify-self:start}
+
+  /* shop locally */
+  .atelier-card{max-width:440px}
+  .product-strip{position:relative;right:auto;bottom:auto;gap:12px;padding:0 32px 56px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 32px;scrollbar-width:none}
+  .product-strip::-webkit-scrollbar{display:none}
+  .tour-strip figure{flex:0 0 min(64vw,250px);height:min(82vw,320px);scroll-snap-align:start;box-shadow:0 12px 28px rgba(0,0,0,.35)}
+  .tour-strip figure:nth-child(2),.tour-strip figure:hover,.tour-strip figure:nth-child(2):hover{transform:none}
+  .islands{padding:88px 32px}
+  .islands-head{flex-direction:column;align-items:flex-start;gap:20px;margin-bottom:48px}
+  .island,.island:nth-child(even){grid-template-columns:1fr;gap:28px;margin-bottom:72px}
+  .island:nth-child(even) .island-photo{order:0}
+  .island-photo{height:min(110vw,520px)}
+
+  /* our story: chapters */
+  .chapter .titles{top:17vh}
+  .chapter .caption{left:32px;right:32px;bottom:120px;max-width:460px}
+  .discover{top:47%;width:132px;height:132px;margin:-66px 0 0 -66px}
+  .discover span{width:92px;height:92px;font-size:11px}
+  .counter{right:32px;bottom:36px}
+  .counter b{font-size:48px}
+  .counter span{font-size:24px}
+  .counter i{width:28px}
+  .chapter-nav{left:32px;right:auto;bottom:40px}
+  .scroll-cue{display:none}
+  .detail{grid-template-columns:1fr;grid-template-rows:32vh 1fr}
+  .detail-body{padding:36px 32px 24px;transform:translateY(40px)}
+  .detail-body .h2{font-size:40px;margin-bottom:20px}
+  .facts{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:16px;margin:28px 0}
+  .facts b{font-size:26px}
+  .detail-close{position:sticky;bottom:14px;width:100%;justify-content:center;background:var(--bark);box-shadow:0 0 0 14px var(--bark)}
+  .chapter::after{background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,.28) 45%,rgba(0,0,0,.72))}
+  .chapter .titles,.chapter .caption{text-shadow:0 1px 16px rgba(0,0,0,.6)}
+
+  /* our story: forest */
+  .forest{min-height:0;padding:100px 32px 0}
+  .forest .lines{display:none}
+  .f-card{max-width:420px}
+  .fstats{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .f-card.nut{grid-column:1/-1;margin:8px 0 0}
+  .play{position:relative;left:auto;top:auto;margin:56px auto 0;width:110px;height:110px}
+  .play i{width:68px;height:68px}
+  .forest-art{width:130%;margin:-30px 0 0 -15%}
+
+  /* our story: timeline runs down the left */
+  .timeline{padding:88px 32px 96px}
+  .timeline .h2{margin-bottom:56px}
+  .tl::before,.tl .tl-fill{left:6px}
+  .tl-item{grid-template-columns:32px 1fr;padding-bottom:48px}
+  .tl-item .dot{grid-column:1;justify-self:start;margin-top:12px}
+  .tl-item .txt,.tl-item:nth-child(odd) .txt,.tl-item:nth-child(even) .txt{grid-column:2;text-align:left;transform:translateX(24px)}
+  .tl-item.in .txt{transform:none}
+  .tl-item .yr{font-size:34px}
+  .tl-item h3{font-size:23px}
+
+  /* blog: Instagram block and story cards become swipe rows */
+  .blog-hero{min-height:100vh;min-height:100svh}
+  .blog-hero .screen-inner{padding-bottom:36px}
+  .blog-hero .ig{position:relative;right:auto;bottom:auto;width:auto;padding:0 0 56px}
+  .ig-cta{margin:0 32px 18px}
+  .reels{overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 32px;padding:0 32px;scrollbar-width:none}
+  .reels::-webkit-scrollbar{display:none}
+  .reel{flex:0 0 min(48vw,220px);height:min(64vw,290px);scroll-snap-align:start}
+  .stories{min-height:0;padding:96px 0 64px}
+  .stories .lede{padding:0 32px}
+  .arc{justify-content:flex-start;flex-wrap:nowrap;gap:14px;margin-top:40px;padding:12px 32px 40px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 32px;perspective:none;scrollbar-width:none}
+  .arc::-webkit-scrollbar{display:none}
+  .arc .post{--r:0deg !important;--y:0px !important;flex:0 0 min(72vw,280px);height:280px;scroll-snap-align:start}
+  .arc .post:first-child{order:9}
+
+  .video-box{padding:16px}
+  .video-close{top:12px;right:16px;width:46px;height:46px}
+}
+
+/* ---------- Phones ---------- */
+@media (max-width:600px){
+  .screen-inner{padding:104px 20px 44px}
+  .display{font-size:clamp(42px,13vw,56px)}
+  .lede{margin-top:20px;font-size:16px}
+  .h2{font-size:clamp(38px,11vw,48px)}
+  .actions{gap:10px;margin-top:28px}
+  .btn-ghost,.btn-gold{height:44px;padding:0 18px;font-size:14px}
+  .promo{margin:0 20px 32px;padding:12px;gap:14px}
+  .promo h3{font-size:21px}
+  .promo p{font-size:13px}
+  .promo img{width:84px;height:84px}
+  .chooser .h2{font-size:clamp(38px,11vw,48px)}
+  .pills{gap:10px;margin-top:28px}
+  .pill{height:46px;padding:0 20px;font-size:14px}
+  .store-card{padding:22px}
+  .store-card .h3{font-size:25px}
+  .band{padding:64px 20px}
+
+  .product-strip{padding:0 20px 44px;scroll-padding:0 20px}
+  .islands{padding:72px 20px}
+  .islands-head{margin-bottom:40px}
+  .stat{font-size:52px}
+  .island{margin-bottom:56px}
+  .shops li{padding:14px 0;font-size:15px}
+  .shops span{text-align:right}
+
+  .chapter .small{font-size:18px;letter-spacing:.26em}
+  .chapter .big{font-size:17vw}
+  .chapter .caption{left:20px;right:20px}
+  .chapter .caption h3{font-size:18px}
+  .chapter .caption p{font-size:14px}
+  .chapter-nav{left:20px}
+  .counter{right:20px}
+  .detail-body{padding:32px 20px 20px}
+  .detail-body .h2{font-size:36px}
+  .forest{padding:96px 20px 0}
+  .forest .display{font-size:46px}
+  .forest-grid{grid-template-columns:1fr;gap:28px}
+  .timeline{padding:80px 20px 88px}
+  .timeline .h2{font-size:36px;margin-bottom:48px}
+  .tl-item{grid-template-columns:28px 1fr;padding-bottom:40px}
+  .tl-item .yr{font-size:30px}
+  .tl-item h3{font-size:21px}
+
+  .ig-cta{margin:0 20px 16px}
+  .ig-cta b{font-size:24px}
+  .reels{padding:0 20px;scroll-padding:0 20px;gap:10px}
+  .reel{border-radius:20px}
+  .reel span{left:8px;right:8px;bottom:8px;gap:8px;padding:8px;font-size:13px}
+  .reel span i{flex-basis:32px;height:32px}
+  .stories .h2{font-size:44px}
+  .stories .lede{padding:0 20px;font-size:16px}
+  .arc{padding:12px 20px 40px;scroll-padding:0 20px}
+  .post h3{font-size:23px}
+}
