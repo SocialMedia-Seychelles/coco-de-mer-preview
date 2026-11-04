@@ -142,7 +142,16 @@
     hero.addEventListener('pointerleave', () => { hero.style.setProperty('--mx', 0); hero.style.setProperty('--my', 0); });
   }
 
-  go(0, 1);
+  // index.html#fanm, #oud ... opens on that perfume (from the menu picker and old addresses)
+  const fromHash = () => PERFUMES.findIndex((p) => '#' + p.id === location.hash);
+  addEventListener('hashchange', () => { const i = fromHash(); if (i > -1) go(i); });
+  // already on the home page: picking a perfume just turns the carousel, even if the address is unchanged
+  document.querySelectorAll('a[href^="index.html#"]').forEach((a) => a.addEventListener('click', (e) => {
+    const i = PERFUMES.findIndex((p) => a.hash === '#' + p.id);
+    if (i < 0) return;
+    e.preventDefault(); history.replaceState(null, '', a.hash); go(i); scrollTo({ top: 0, behavior: 'smooth' });
+  }));
+  go(Math.max(0, fromHash()), 1);
 })();
 
 // Load the other perfumes' images once the first one is on screen

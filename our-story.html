@@ -11,8 +11,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Jomhuria&family=Nanum+Gothic:wght@400;700&family=Parkinsans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=m10">
-<link rel="stylesheet" href="assets/pages.css?v=m10">
+<link rel="stylesheet" href="assets/site.css?v=m12">
+<link rel="stylesheet" href="assets/pages.css?v=m12">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="assets/img/icon-512.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -24,12 +24,13 @@
   <nav class="menu" aria-label="Main">
     <span class="menu-glow" aria-hidden="true"></span>
     <a class="menu-home" href="index.html" aria-label="Home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.5 12 3.8l8.5 6.7"/><path d="M5.8 9v10.7h4.4v-5.6h3.6v5.6h4.4V9"/></svg></a>
-    <a href="index.html#collection">Perfumes</a>
-    <a href="where-to-buy.html">Where to Buy</a>
+    <a class="menu-perf" href="index.html#collection" aria-haspopup="true" aria-expanded="false" data-perf-open>Perfumes<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
     <a href="our-story.html" aria-current="page">Our Story</a>
+    <a href="visit.html">Visit Us</a>
+    <a href="where-to-buy.html">Where to Buy</a>
     <a href="blog.html">Journal</a>
-    <a href="shop-locally.html">Factory Tours</a>
   </nav>
+  <div class="perf-panel" data-perf-panel hidden><p>The collection</p><div><a href="index.html#fanm"><img src="assets/img/thumb-fanm.webp" alt="" loading="lazy"><b>Fanm</b><small>For her</small></a><a href="index.html#oud"><img src="assets/img/thumb-oud.webp" alt="" loading="lazy"><b>Oud</b><small>For him &amp; her</small></a><a href="index.html#lodas"><img src="assets/img/thumb-lodas.webp" alt="" loading="lazy"><b>Lodas</b><small>For him &amp; her</small></a><a href="index.html#zonm"><img src="assets/img/thumb-zonm.webp" alt="" loading="lazy"><b>Zonm</b><small>For him</small></a><a href="index.html#sovaz"><img src="assets/img/thumb-sovaz.webp" alt="" loading="lazy"><b>Sovaz</b><small>For him &amp; her</small></a></div></div>
   <a class="btn-nut" href="https://www.cocodemerseychelles.com" target="_blank" rel="noopener">Shop the Nut
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
   <button class="btn-grid" aria-label="Open menu" aria-expanded="false" data-menu-open>
@@ -39,9 +40,10 @@
 <div class="overlay-menu" data-menu hidden>
   <button class="overlay-close" aria-label="Close menu" data-menu-close>×</button>
   <nav aria-label="Full menu">
-    <a href="index.html">Home</a><a href="index.html#collection">Perfumes</a><a href="where-to-buy.html">Where to Buy</a>
-    <a href="shop-locally.html">Shop Locally &amp; Factory Tours</a><a href="our-story.html">Our Story</a><a href="blog.html">Journal</a>
-    <a href="https://www.cocodemerseychelles.com" target="_blank" rel="noopener">Shop the Coco de Mer Nut</a>
+    <a href="index.html">Home</a><a href="index.html#collection">Perfumes</a>
+    <div class="ov-perfumes"><a href="index.html#fanm">Fanm</a><a href="index.html#oud">Oud</a><a href="index.html#lodas">Lodas</a><a href="index.html#zonm">Zonm</a><a href="index.html#sovaz">Sovaz</a></div>
+    <a href="our-story.html">Our Story</a><a href="visit.html">Visit Us</a><a href="where-to-buy.html">Where to Buy</a><a href="blog.html">Journal</a>
+    <a class="ov-nut" href="https://www.cocodemerseychelles.com" target="_blank" rel="noopener">Shop the Coco de Mer Nut</a>
   </nav>
 </div>
 
@@ -161,7 +163,7 @@
 <footer class="site-footer">
   <div class="foot-brand"><img loading="lazy" decoding="async" src="assets/img/logo.png" alt="Coco De Mer Collection"><p>The essence of Seychelles, handmade with the legendary Coco de Mer.</p></div>
   <div class="foot-col"><h3>Visit</h3><p>Island Scent Distillery<br>Domaine de Val des Prés, Au Cap<br>Mahé, Seychelles</p>
-    <a class="tour-cta" href="shop-locally.html#tours">Free factory tours <span>Learn more</span></a></div>
+    <a class="tour-cta" href="visit.html">Free factory tours <span>Learn more</span></a></div>
   <div class="foot-col"><h3>Contact</h3><p><a href="tel:+2482595547">+248 259 5547</a><br><a class="wa" href="https://wa.me/2482595547" target="_blank" rel="noopener">Also on WhatsApp</a><br><a href="mailto:info@cocodemercosmetics.com">info@cocodemercosmetics.com</a></p></div>
   <div class="foot-col"><h3>Follow</h3><div class="socials">
       <a href="https://www.instagram.com/cocodemerseychelles/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" class="fill"/></svg></a>
@@ -171,7 +173,7 @@
 </div>
   <p class="foot-legal">© <span data-year></span> Coco De Mer Collection · Island Scent Pty Ltd</p>
 </footer>
-<script src="assets/site.js?v=m10"></script>
-<script src="assets/pages.js?v=m10"></script>
+<script src="assets/site.js?v=m12"></script>
+<script src="assets/pages.js?v=m12"></script>
 </body>
 </html>

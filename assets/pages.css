@@ -419,3 +419,18 @@
   .arc{padding:12px 20px 40px;scroll-padding:0 20px}
   .post h3{font-size:23px}
 }
+
+/* ---------- Visit Us: plan your visit ---------- */
+.visit-plan{background:var(--bark);padding:120px 96px}
+.visit-head{margin-bottom:56px}
+.visit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(243,233,218,.12);border:1px solid rgba(243,233,218,.12);border-radius:18px;overflow:hidden}
+.visit-grid div{padding:30px 28px;background:var(--bark)}
+.visit-grid span{display:block;margin-bottom:14px;font-family:var(--ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.visit-grid b{display:block;font-family:var(--serif);font-weight:500;font-size:28px;line-height:1.1}
+.visit-grid p{margin:8px 0 0;opacity:.7;font-size:15px}
+.visit-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.btn-outline{display:inline-flex;align-items:center;height:51px;padding:0 26px;border-radius:12px;border:1px solid rgba(217,183,122,.6);color:var(--gold);
+  font-family:var(--ui);font-weight:500;font-size:15px;text-decoration:none;transition:background .3s,transform .35s var(--ease-out)}
+.btn-outline:hover{background:rgba(217,183,122,.12);transform:translateY(-2px)}
+@media (max-width:1100px){.visit-plan{padding:88px 32px}.visit-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.visit-plan{padding:72px 20px}.visit-head{margin-bottom:36px}.visit-grid{grid-template-columns:1fr}.visit-grid div{padding:24px 22px}}
